@@ -13,8 +13,6 @@ Las funcionalidades que ofrece esta aplicación son:
 
 Funcionamiento sin necesidad de Internet ya que la transacción la realiza la aplicación controlador.
 
-![captura de la app](app.gif)
-
 ## ¿Qué contiene el demo?
 El demo te brinda la experiencia desde el punto del pasajero, te permitirá logearte a través de tu cuenta de Google, y se te obsequiarán $10 para el pago de tu pasaje por medio de un código QR en la aplicación.
 
@@ -36,7 +34,7 @@ Esta opción es Avanzada y te permitirá probar todo el código por ti mismo
 - `expo start` para el entorno de desarrollo.
 - Expo-client para poder probar en un emulador o en un telefono.
 
-### Aplicaciones complementarias
+## Aplicaciones complementarias
 - [Aplicación Controlador](https://github.com/initgrammers/AppCollector)
 - [Backend](https://github.com/initgrammers/firebaseBackTP)
 ## Licencia
