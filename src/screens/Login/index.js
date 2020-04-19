@@ -1,9 +1,12 @@
 import React from "react";
-import { View, Button } from "react-native";
-import { signInWithGoogleAsync } from "../services/auth";
-import firebase from "../services/firebase";
+import Layout from "./Login.screen";
+import { useNavigation } from "@react-navigation/native";
+import { signInWithGoogleAsync } from "../../services/auth";
+import firebase from "../../services/firebase";
 
-export default () => {
+export const Login = () => {
+  const { navigate } = useNavigation();
+
   const login = async () => {
     const result = await signInWithGoogleAsync();
     if (result.type === "success") {
@@ -17,9 +20,8 @@ export default () => {
     if (result.cancelled) alert("Login cancelado");
     if (result.error) alert(result.message);
   };
-  return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
-      <Button title="Login" onPress={login} />
-    </View>
-  );
+  const navigationScreen = () => {
+    navigate("HomeTab");
+  };
+  return <Layout onPressLogin={() => navigationScreen()} />;
 };
