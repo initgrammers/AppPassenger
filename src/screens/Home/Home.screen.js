@@ -1,8 +1,11 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import QRCode from "react-native-qrcode-generator";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+
 const Layout = (props) => {
-  const { onPressLogin, name = "usuario" } = props;
+  const { name = "usuario", text } = props;
+
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -10,6 +13,7 @@ const Layout = (props) => {
         <Text style={styles.text1}>
           Utiliza este código para pagar tu pasaje
         </Text>
+        {/* <QRCode value={text} size={200} bgColor="black" fgColor="white" /> */}
       </View>
     </View>
   );
