@@ -1,17 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
-const logo = "../../../assets/logo.png";
 const Layout = (props) => {
   const { onPressLogin } = props;
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Bienvenido</Text>
-      <Image source={require(logo)} style={styles.logo} />
-      <TouchableOpacity style={styles.buttonContainer} onPress={onPressLogin}>
-        <Ionicons name="logo-google" color="#FF8900" size={28} />
-        <Text style={styles.buttonText}>Iniciar sesion con Google</Text>
-      </TouchableOpacity>
     </View>
   );
 };
@@ -21,7 +15,7 @@ export default Layout;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFD428",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
