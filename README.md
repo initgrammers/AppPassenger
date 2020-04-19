@@ -9,7 +9,7 @@ Las funcionalidades que ofrece esta aplicación son:
 - El pasajero sube al transporte siguiendo las recomendaciones de la OMS y muestra desde su celular el código de pago al cobrador del transporte quien usa su celular para escanear el código QR del pasajero y debitar el costo del viaje.  
 - El código QR también permite identificar la unidad en la que  se ha embarcado el usuario y  a las personas que compartieron este viaje. 
 - El pasajero puede pagar por varias personas con tarifas diferentes.
-- - Si una persona ha usado Transporte Pago y da positivo para COVID-19, el sistema de salud estará en la facultad de pedir a Transporte Pago información de las rutas de dicho usuario para realizar el seguimiento respectivo y ponerse en contacto con posibles contagiados. 
+- Si una persona ha usado Transporte Pago y da positivo para COVID-19, el sistema de salud estará en la facultad de pedir a Transporte Pago información de las rutas de dicho usuario para realizar el seguimiento respectivo y ponerse en contacto con posibles contagiados. 
 
 Funcionamiento sin necesidad de Internet ya que la transacción la realiza la aplicación controlador.
 
@@ -36,6 +36,9 @@ Esta opción es Avanzada y te permitirá probar todo el código por ti mismo
 - `expo start` para el entorno de desarrollo.
 - Expo-client para poder probar en un emulador o en un telefono.
 
+### Aplicaciones complementarias
+- [Aplicación Controlador](https://github.com/initgrammers/AppCollector)
+- [Backend](https://github.com/initgrammers/firebaseBackTP)
 ## Licencia
 
 MIT
