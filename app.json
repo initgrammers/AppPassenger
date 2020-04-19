@@ -2,11 +2,7 @@
   "expo": {
     "name": "AppPassenger",
     "slug": "AppPassenger",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,11 +14,23 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "extra": {
+      "firebase": {
+        "apiKey": "AIzaSyDHVmEiDeYk_8FfnEfHIaI3H4X3bf7TkZg",
+        "authDomain": "transporte-pagos.firebaseapp.com",
+        "databaseURL": "https://transporte-pagos.firebaseio.com",
+        "projectId": "transporte-pagos",
+        "storageBucket": "transporte-pagos.appspot.com",
+        "messagingSenderId": "773720352725",
+        "appId": "1:773720352725:web:8257fe7394ad9e7d7dff5c",
+        "measurementId": "G-215R98GDPH"
+      },
+      "androidClientId": "773720352725-610ef2kbv4cff6g7k5mckg8foh6q3iqu.apps.googleusercontent.com",
+      "scopes": ["profile", "email"]
     }
   }
 }
