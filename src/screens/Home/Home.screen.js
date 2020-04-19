@@ -2,10 +2,15 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 const Layout = (props) => {
-  const { onPressLogin } = props;
+  const { onPressLogin, name = "usuario" } = props;
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bienvenido</Text>
+      <View style={styles.content}>
+        <Text style={styles.title}>{`Bienvenido ${name}`}</Text>
+        <Text style={styles.text1}>
+          Utiliza este código para pagar tu pasaje
+        </Text>
+      </View>
     </View>
   );
 };
@@ -16,32 +21,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  },
+  content: {
+    marginTop: 32,
+    width: "100%",
+    padding: 8,
   },
   title: {
     color: "#242A37",
     fontSize: 32,
     fontWeight: "bold",
   },
-  logo: {
-    width: 290,
-    height: 290,
-    resizeMode: "stretch",
-  },
-  buttonContainer: {
-    width: 300,
-    height: 44,
-    backgroundColor: "#fafafa",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    elevation: 4,
-    borderRadius: 8,
-    flexDirection: "row",
-  },
-  buttonText: {
-    color: "#FF8900",
+  text1: {
+    color: "#242A37",
     fontSize: 16,
-    fontWeight: "300",
+    fontWeight: "500",
   },
 });

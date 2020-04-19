@@ -13,9 +13,21 @@ const MyHomeBottomTab = () => (
     inactiveColor="#242A37"
     barStyle={{ backgroundColor: "#FFD428" }}
   >
-    <BottomTabs.Screen name="Home" component={Home} />
-    <BottomTabs.Screen name="Profile" component={Profile} />
-    <BottomTabs.Screen name="History" component={History} />
+    <BottomTabs.Screen
+      options={{ title: "Home" }}
+      name="Home"
+      component={Home}
+    />
+    <BottomTabs.Screen
+      options={{ title: "Historial" }}
+      name="History"
+      component={History}
+    />
+    <BottomTabs.Screen
+      options={{ title: "Perfil" }}
+      name="Profile"
+      component={Profile}
+    />
   </BottomTabs.Navigator>
 );
 

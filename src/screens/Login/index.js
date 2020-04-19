@@ -15,6 +15,8 @@ export const Login = () => {
         result.accessToken
       );
       const data = await firebase.auth().signInWithCredential(credential);
+      console.log(data);
+      navigate("HomeTab");
       alert("success");
     }
     if (result.cancelled) alert("Login cancelado");
