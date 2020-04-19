@@ -1,13 +1,16 @@
 # App Passenger
 
 Esta aplicación está orientada para todos los usuarios que usen el transporte público sin la necesidad de usar monedas o billetes que pueden ser estar contaminados con el virus así evitando la propagación del mismo. La aplicación estará disponible para la descarga en la Google Play y Apple Store.
+
 Las funcionalidades que ofrece esta aplicación son:
-El usuario se registra a la aplicación con su información básica necesaria como número de identificación, nombre, dirección, correo electrónico, entre otros.
-Carga el dinero a su cuenta a través de servicio bancarios en Internet o en puntos de recarga en efectivo como tiendas de barrio y entidades bancarias para poder usar el transporte público. 
-El pasajero sube al transporte siguiendo las recomendaciones de la OMS y muestra desde su celular el código de pago al cobrador del transporte quien usa su celular para escanear el código QR del pasajero y debitar el costo del viaje.  
-El código QR también permite identificar la unidad en la que  se ha embarcado el usuario y  a las personas que compartieron este viaje. 
-El pasajero puede pagar por varias personas con tarifas diferentes.
-Si una persona ha usado Transporte Pago y da positivo para COVID-19, el sistema de salud estará en la facultad de pedir a Transporte Pago información de las rutas de dicho usuario para realizar el seguimiento respectivo y ponerse en contacto con posibles contagiados. 
+
+- El usuario se registra a la aplicación con su información básica necesaria como número de identificación, nombre, dirección, correo electrónico, entre otros.
+- Carga el dinero a su cuenta a través de servicio bancarios en Internet o en puntos de recarga en efectivo como tiendas de barrio y entidades bancarias para poder usar el transporte público. 
+- El pasajero sube al transporte siguiendo las recomendaciones de la OMS y muestra desde su celular el código de pago al cobrador del transporte quien usa su celular para escanear el código QR del pasajero y debitar el costo del viaje.  
+- El código QR también permite identificar la unidad en la que  se ha embarcado el usuario y  a las personas que compartieron este viaje. 
+- El pasajero puede pagar por varias personas con tarifas diferentes.
+- - Si una persona ha usado Transporte Pago y da positivo para COVID-19, el sistema de salud estará en la facultad de pedir a Transporte Pago información de las rutas de dicho usuario para realizar el seguimiento respectivo y ponerse en contacto con posibles contagiados. 
+
 Funcionamiento sin necesidad de Internet ya que la transacción la realiza la aplicación controlador.
 
 ![captura de la app](app.gif)
