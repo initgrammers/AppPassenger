@@ -1,25 +1,9 @@
 import React, { useEffect } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
-import firebase from "../../services/firebase";
-import { useDispatch, useSelector } from "react-redux";
+
 const Layout = (props) => {
   const { onPressLogin } = props;
-  const { uid } = useSelector((state) => state);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    firebase
-      .firestore()
-      .collection("passenger")
-      .doc(uid)
-      .onSnapshot((doc) => {
-        dispatch({
-          type: "SET_USER",
-          payload: doc.data(),
-        });
-      });
-  }, []);
 
   return (
     <View style={styles.container}>

@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 export const History = () => {
   const { uid } = useSelector((state) => state);
-
   useEffect(async () => {
     try {
       const data = await firebase

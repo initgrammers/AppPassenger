@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Login, Home, Profile, History } from "../screens/";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
+import Loading from "../screens/Loading";
 
 const BottomTabs = createMaterialBottomTabNavigator();
 const MyHomeBottomTab = () => (
@@ -22,6 +23,7 @@ const MyHomeBottomTab = () => (
 const StackAuth = createStackNavigator();
 const MyStackNavigatorAuth = () => (
   <StackAuth.Navigator headerMode="none">
+    <StackAuth.Screen name="Loading" component={Loading} />
     <StackAuth.Screen name="Login" component={Login} />
     <StackAuth.Screen name="HomeTab" component={MyHomeBottomTab} />
   </StackAuth.Navigator>
