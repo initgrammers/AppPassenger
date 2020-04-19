@@ -1,24 +1,31 @@
-import React, { Component, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "./History.screen";
 import firebase from "../../services/firebase";
 import { useSelector } from "react-redux";
 
 export const History = () => {
   const { uid } = useSelector((state) => state);
-
-  useEffect(async () => {
+  const [data, setData] = useState([]);
+  const getData = async () => {
     try {
-      const data = await firebase
+      let dataArray = [];
+      const _data = await firebase
         .firestore()
         .collection("passenger")
         .doc(uid)
-        .doc("tickets")
+        .collection("tickets")
         .get();
-      console.log(data);
+      _data.forEach(function (doc) {
+        dataArray.push(doc.data());
+      });
+      setData(dataArray);
     } catch (error) {
-      log(error);
+      console.log("fallo", error);
     }
+  };
+  useEffect(async () => {
+    getData();
   }, []);
 
-  return <Layout />;
+  return <Layout data={data} />;
 };

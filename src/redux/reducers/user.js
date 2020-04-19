@@ -1,16 +1,15 @@
 const initialState = {
   uid: null,
-  displayName: "",
+  name: "",
   email: "",
   photoURL: "",
-  card: {
+  Card: {
     id: null,
     balance: null,
   },
 };
 
 const user = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case "SET_USER":
       return {

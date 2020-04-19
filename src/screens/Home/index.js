@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Layout from "./Home.screen";
 import firebase from "../../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
 export const Home = () => {
-  const [text, setText] = useState("");
-  const { uid } = useSelector((state) => state);
+  const { uid, name, Card, photoURL } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,5 +18,5 @@ export const Home = () => {
         });
       });
   }, []);
-  return <Layout text={text} />;
+  return <Layout photoURL={photoURL} name={name} card={Card} />;
 };

@@ -7,65 +7,9 @@ import {
   ScrollView,
   StyleSheet,
 } from "react-native";
+import moment from "moment";
 const Layout = (props) => {
-  const data = [
-    {
-      id: 0,
-      nameSite: "Río Coca - Playon de la Marín",
-      price: 0.37,
-      date: "10/04/2020 7:25am",
-      normalRate: true,
-      specialRate: true,
-    },
-    {
-      id: 1,
-      nameSite: "Playon de la Marín - Manuela Cañizares",
-      price: 0.25,
-      date: "10/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-    {
-      id: 2,
-      nameSite: "De las universidades - Hospital Eugenio Espejo",
-      price: 0.25,
-      date: "11/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-    {
-      id: 3,
-      nameSite: "Playon de la Marín - Manuela Cañizares",
-      price: 0.75,
-      date: "10/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-    {
-      id: 4,
-      nameSite: "De las universidades - Hospital Eugenio Espejo",
-      price: 0.25,
-      date: "11/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-    {
-      id: 5,
-      nameSite: "Playon de la Marín - Manuela Cañizares",
-      price: 1.0,
-      date: "10/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-    {
-      id: 6,
-      nameSite: "De las universidades - Hospital Eugenio Espejo",
-      price: 1.25,
-      date: "11/04/2020 10:25am",
-      normalRate: true,
-      specialRate: false,
-    },
-  ];
+  const { data } = props;
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
@@ -78,7 +22,14 @@ const Layout = (props) => {
 };
 
 const CardInfo = (props) => {
-  const { nameSite, price, date, normalRate, specialRate } = props.site;
+  const {
+    routeName = "Terminal Quitumbe - Recreo",
+    price,
+    date,
+    normalRate,
+    specialRate,
+  } = props.site;
+  const date_hour = moment(date.seconds * 1000).format("L LT");
   return (
     <View style={styles.cardContainer}>
       <View style={styles.titleView}>
@@ -91,7 +42,7 @@ const CardInfo = (props) => {
             flex: 1,
           }}
         >
-          {nameSite}
+          {routeName}
         </Text>
         <Text
           style={{
@@ -105,11 +56,11 @@ const CardInfo = (props) => {
       </View>
       <View style={styles.infoView}>
         <View style={{ margin: 15 }}>
-          <Text style={{ fontSize: 12, lineHeight: 16 }}>{date}</Text>
+          <Text style={{ fontSize: 12, lineHeight: 16 }}>{date_hour}</Text>
           <Text style={{ fontSize: 12, lineHeight: 16 }}>
-            {normalRate && "Tarifa Adulto"}
-            {normalRate && specialRate && "/"}
-            {specialRate && "Tarifa Especial"}
+            {normalRate > 0 && "Tarifa Adulto"}
+            {normalRate > 0 && specialRate > 0 && "/"}
+            {specialRate > 0 && "Tarifa Especial"}
           </Text>
         </View>
         <TouchableOpacity

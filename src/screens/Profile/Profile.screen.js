@@ -1,10 +1,12 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import { useSelector } from "react-redux";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 const Layout = (props) => {
-  const { onPressLogin } = props;
+  const { photoURL } = useSelector((state) => state);
   return (
     <View style={styles.container}>
+      <Image source={{ uri: photoURL }} />
       <Text style={styles.title}>Profile</Text>
     </View>
   );
