@@ -27,12 +27,12 @@ Para probar debes tener un celular Android y habilitar los origenes desconocidos
 
 ### Opción 1:
 
-- Descarga el apk [aquí](https://exp.host/@henrymvc/customTabs)
+- Descarga el apk [aquí](https://expo.io/artifacts/96d92663-7db9-4e97-9c3a-e90a18d483b9)
 - Instala el apk, si te pregunta
 
 ### Opción 2:
 
-- Descarga expo-client [aquí](https://exp.host/@henrymvc/customTabs)
+- Descarga expo-client [aquí](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_EC)
 - Escanea el código QR de la aplicación aquí
 
 ### Opción 3:
